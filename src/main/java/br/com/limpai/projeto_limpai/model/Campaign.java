@@ -6,7 +6,8 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-public class Campanha {
+@Entity
+public class Campaign {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,10 +24,10 @@ public class Campanha {
     @ManyToOne
     private Long localId;
 
-    public Campanha() {
+    public Campaign() {
     }
 
-    public Campanha(Long campanhaId, String nome, String descricao, LocalDateTime dataInicio, LocalDateTime dataFim, BigDecimal metaFundos, BigDecimal fundosArrecadados, Long localId) {
+    public Campaign(Long campanhaId, String nome, String descricao, LocalDateTime dataInicio, LocalDateTime dataFim, BigDecimal metaFundos, BigDecimal fundosArrecadados, Long localId) {
         this.campanhaId = campanhaId;
         this.nome = nome;
         this.descricao = descricao;
@@ -104,8 +105,8 @@ public class Campanha {
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
-        Campanha campanha = (Campanha) o;
-        return Objects.equals(campanhaId, campanha.campanhaId);
+        Campaign campaign = (Campaign) o;
+        return Objects.equals(campanhaId, campaign.campanhaId);
     }
 
     @Override
