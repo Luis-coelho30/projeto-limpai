@@ -1,33 +1,25 @@
 package br.com.limpai.projeto_limpai.model;
 
-import jakarta.persistence.*;
-
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-@Entity
-public class Campaign {
+public class Campanha {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long campanhaId;
-
     private String nome;
     private String descricao;
     private LocalDateTime dataInicio;
     private LocalDateTime dataFim;
     private BigDecimal metaFundos = BigDecimal.ZERO;
     private BigDecimal fundosArrecadados = BigDecimal.ZERO;
+    private Local local;
 
-    @JoinColumn
-    @ManyToOne
-    private Long localId;
-
-    public Campaign() {
+    public Campanha() {
     }
 
-    public Campaign(Long campanhaId, String nome, String descricao, LocalDateTime dataInicio, LocalDateTime dataFim, BigDecimal metaFundos, BigDecimal fundosArrecadados, Long localId) {
+    public Campanha(Long campanhaId, String nome, String descricao, LocalDateTime dataInicio, LocalDateTime dataFim,
+                    BigDecimal metaFundos, BigDecimal fundosArrecadados, Local local) {
         this.campanhaId = campanhaId;
         this.nome = nome;
         this.descricao = descricao;
@@ -35,7 +27,7 @@ public class Campaign {
         this.dataFim = dataFim;
         this.metaFundos = metaFundos;
         this.fundosArrecadados = fundosArrecadados;
-        this.localId = localId;
+        this.local = local;
     }
 
     public Long getCampanhaId() {
@@ -94,19 +86,19 @@ public class Campaign {
         this.fundosArrecadados = fundosArrecadados;
     }
 
-    public Long getLocalId() {
-        return localId;
+    public Local getLocal() {
+        return local;
     }
 
-    public void setLocalId(Long localId) {
-        this.localId = localId;
+    public void setLocal(Local local) {
+        this.local = local;
     }
 
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
-        Campaign campaign = (Campaign) o;
-        return Objects.equals(campanhaId, campaign.campanhaId);
+        Campanha campanha = (Campanha) o;
+        return Objects.equals(campanhaId, campanha.campanhaId);
     }
 
     @Override
