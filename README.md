@@ -4,15 +4,15 @@ permitindo que ações ambientais sejam quantificadas e transformadas em dados d
 
 ### Tecnologias e Configurações
 A arquitetura do Back-end foi projetada para ser escalável e segura, utilizando as seguintes tecnologias:
-- Linguagem & Framework: Java com Spring Boot.
-- Banco de Dados: MySQL.
-- Persistência de Dados: Java Database Connectivity (JDBC).
-- Segurança: JSON Web Tokens (JWT) com autenticação baseada em papéis (Role-Based).
-- Hospedagem/Cloud: Railway (para API e banco de dados).
+- Linguagem & Framework: Java com Spring Boot
+- Banco de Dados: MySQL
+- Persistência de Dados: Java Database Connectivity (JDBC)
+- Segurança: JSON Web Tokens (JWT) com autenticação baseada em papéis (Role-Based)
+- Hospedagem/Cloud: Railway (para API e banco de dados)
 
 ### Instalação e Execução (Recomendado)
 Para rodar o projeto localmente, você precisará de:
-I) Java JDK 17+ e Maven instalados.
-II) Um servidor MySQL ativo.
-III) Configurar as credenciais do banco no arquivo application.properties do Spring Boot.
-IV) Executar o comando: mvn spring-boot:run.
+I) Java JDK 17+ e Maven instalados
+II) Um servidor MySQL ativo
+III) Configurar as credenciais do banco no arquivo application.properties do Spring Boot
+IV) Executar o comando: mvn spring-boot:run
