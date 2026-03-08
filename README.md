@@ -12,7 +12,7 @@ A arquitetura do Back-end foi projetada para ser escalável e segura, utilizando
 
 ### Instalação e Execução (Recomendado)
 Para rodar o projeto localmente, você precisará de:
-I) Java JDK 17+ e Maven instalados
-II) Um servidor MySQL ativo
-III) Configurar as credenciais do banco no arquivo application.properties do Spring Boot
-IV) Executar o comando: mvn spring-boot:run
+1) Java JDK 17+ e Maven instalados
+2) Um servidor MySQL ativo
+3) Configurar as credenciais do banco no arquivo application.properties do Spring Boot
+4) Executar o comando: mvn spring-boot:run
