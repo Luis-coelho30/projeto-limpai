@@ -11,7 +11,7 @@ A arquitetura do Back-end foi projetada para ser escalável e segura, utilizando
 - Hospedagem/Cloud: Railway (para API e banco de dados)
 
 ### Instalação e Execução (Recomendado)
-Para rodar o projeto localmente, você precisará de:
+Para rodar o projeto localmente, você precisará:
 1) Java JDK 17+ e Maven instalados
 2) Um servidor MySQL ativo
 3) Configurar as credenciais do banco no arquivo application.properties do Spring Boot
